@@ -1,0 +1,6 @@
+{
+  "name": "simple",
+  "devDependencies": {
+    "lerna": "^3.10.7"
+  }
+}
