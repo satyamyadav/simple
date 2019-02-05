@@ -1,0 +1,27 @@
+<div id="sidebarLeft">
+
+  <ul>
+
+    <% pageList.forEach((page) => { %>
+    <li>
+      <%= page.name %>
+      <ul>
+
+        <%  page.routes.forEach(({name, url}) => { %>
+          <li>
+            <a
+            href="<%= url %>"
+            >
+            <%= name %>
+
+            </a>
+          </li>
+          <%  }) %>
+          
+          <% }) %>
+        </ul>
+        
+      </li>
+    </ul>
+
+</div>

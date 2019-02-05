@@ -1,0 +1,76 @@
+<hr>
+
+<footer class="footer pb-3">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md col-12 pt-5">
+        <strong>
+          RECENT POSTS
+
+        </strong>
+        <ul class="list-group list-group-flush mt-3">
+          <% posts(3).map(({title, author, createdAt}) => { %> 
+            <li class="list-group-item border-0 pl-0">
+              <img height="64" width="64" class="rounded img-fluid float-left mr-3" src="<%= author.avatar %>" alt="">
+              <a href="post" class="link-muted">
+                <%= title %>
+              </a>
+              <br>
+              <small class="text-muted">
+                <%= createdAt %>
+              </small>
+            </li>
+          <% }) %>
+          
+        </ul>
+      </div>
+      
+      <div class="col-md col-12 pt-5">
+        <strong>
+          TAG CLOUD
+        </strong>
+        <div class="pt-3 pb-4">
+          <% tags(6).map(tag => { %>
+           <a href="tag" class="btn btn-outline-default btn-sm m-1">
+            <%= tag %>
+           </a>             
+          <% }) %>
+        </div>
+        <strong>
+          SUBSCRIBE TO BLOG
+        </strong>
+        <p class="text-muted mb-4 mt-4" >
+          Get latest blog posts and ideas in email.
+        </p>
+        <div>
+          <form class="form-inline d-block w-100">
+            <input style="width: 68%" class="form-control w-60" type="email" placeholder="">
+            <button class="float-right btn btn-default" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md col-12 pt-5">
+        <strong>
+          TEXT MESSAGES
+        </strong>
+        <p class="text-muted mt-3">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s, 
+        </p>
+        <p class="text-muted mt-4">
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+          by injected humour, or 
+          a dictio
+        </p>
+      </div>
+
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col pt-3 pb-3 text-left text-muted">
+        © 2018 Blog. All right Reserved. 
+      </div>
+    </div>
+  </div>
+</footer>
